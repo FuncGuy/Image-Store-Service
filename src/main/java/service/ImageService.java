@@ -16,7 +16,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Date;
 import java.util.List;
 
 import static constants.Constants.*;
@@ -80,8 +79,8 @@ public class ImageService {
         ImageResponse imageResponse;
         String imagePath = Album_Directory + albumName + "/" + imageName;
         try {
-            File fi = new File(imagePath);
-            byte[] fileContent = Files.readAllBytes(fi.toPath());
+            File image = new File(imagePath);
+            byte[] fileContent = Files.readAllBytes(image.toPath());
             imageResponse = new ImageResponse(fileContent, "found");
         } catch (IOException e) {
             imageResponse = new ImageResponse(null, "not found");

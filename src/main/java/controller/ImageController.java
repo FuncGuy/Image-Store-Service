@@ -5,6 +5,7 @@ import model.DeleteImageResponse;
 import model.ImageResponse;
 import model.UploadImageResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/imageService")
+@SpringBootApplication
 public class ImageController {
 
     @Autowired
